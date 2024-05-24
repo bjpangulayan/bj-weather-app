@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <form id="searchForm">
+        <input class="search-box" type="text" id="cityInput" placeholder="Enter city name">
+        <!-- <input type="submit" value="Search"> -->
+        <button class="favorite-btn btn" type="button">
+            <img src="./image/fav-icon.png" alt="favorite-btn" />
+        </button>
+
+    </form>
+
+    <div>
+        <label>
+            <input type="radio" name="unit" value="metric" checked> °C
+        </label>
+        <label>
+            <input type="radio" name="unit" value="imperial"> °F
+        </label>
+
+        <div id="currentforecast" class="currentforecast">current weather</div>
+        <div id="currentdate" class="currentdate">current date</div>
+
+
+    </div>
+
+    <div id="forecast" class="forecast"></div>
+    <div id="weatherInfo" class="weather-info"></div>
+</div>
+
+
+
+
+<button id="showGraphBtn">Show Graph</button>
+<canvas id="weatherChart" width="400" height="200" style="display:none;"></canvas>
+
+
+
+<script src="script.js"></script>
+<script src="currentW.js"></script>
+<script src="chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
